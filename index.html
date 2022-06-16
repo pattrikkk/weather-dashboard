@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	    <title>Meteostanica</title>
+	    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+	    <link rel="stylesheet" href="assets/css/styles.css">
+
+		<link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+	    <nav class="navbar navbar-light navbar-expand-md navigation-clean bg-primary shadow">
+	        <div class="container">
+				<div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only"></span><span class="navbar-toggler-icon"></span></button>
+	            <div class="collapse navbar-collapse" id="navcol-1">
+					<ul class="nav navbar-nav mr-auto">
+						<li class="nav-item">
+					        <a class="nav-link text-white" href="#">
+					          <span class=""></span>
+					      	</a>
+					    </li>
+	                </ul>
+	                <ul class="nav navbar-nav ml-auto">
+						<li class="nav-item active">
+					        <a class="nav-link text-white" href="index.html">
+						        <i class="fas fa-home"></i>
+						        <span>Domov</span>
+					      	</a>
+					    </li>
+
+						<!--<li class="nav-item">
+							<input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
+					    </li>-->
+	                </ul>
+	            </div>
+	        </div>
+	    </nav>
+
+		<div class="container hidden">
+			<div class="row mx-md-n5">
+				<div class=" col-md-12 mb-4">
+				<!-- Čas a dátum -->
+					<div class="card dark shadow-sm mt-4">
+					<div class="card-body">
+						<div class="row no-gutters">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+							<div class="text-center">
+								<h1 class="display-3">
+									<span class="cas hodiny"></span>
+								</h1>
+								<h1 class="display-5">
+									<span class="rok hodiny"></span>
+								</h1>
+							</div>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<!-- Teplota -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+					<div class="card-body">
+						<div class="row no-gutters">
+						<div class="col mr-2">
+							<div class="text-xs text-secondary mb-1">Teplota</div>
+							<div class="h5 mb-0" id="temp">Nedoplnené</div>
+						</div>
+						<div class="col-auto">
+							<i class="fa fa-thermometer-half" style="font-size:50px; color:#007bff;"></i>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<!-- Pocitová teplota -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+						<div class="card-body">
+							<div class="row no-gutters">
+							<div class="col mr-2">
+								<div class="text-xs text-secondary mb-1">Pocitová teplota</div>
+								<div class="h5 mb-0 font-weight" id="feels_like">Nedoplnené</div>
+							</div>
+								<div class="col-auto">
+									<i class="fa fa-thermometer-half" style="font-size:50px; color:#007bff;"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Vlhkosť vzduchu -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+					<div class="card-body">
+						<div class="row no-gutters">
+							<div class="col mr-2">
+								<div class="text-xs text-secondary mb-1">Vlhkosť vzduchu</div>
+								<div class="h5 mb-0 font-weight" id="humidity">Nedoplnené</div>
+							</div>
+							<div class="col-auto">
+								<i class="fa fa-tint" style="font-size:50px; color:#007bff;"></i>
+							</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<!-- Atmosferický tlak -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+					<div class="card-body">
+						<div class="row no-gutters">
+						<div class="col mr-2">
+							<div class="text-xs text-secondary mb-1">Atmosferický tlak</div>
+							<div class="h5 mb-0 font-weight" id="pressure">Nedoplnené</div>
+						</div>	                  
+							<div class="col-auto">
+								<i class="fa fa-tachometer-alt" style="font-size:60px; color:#007bff"></i>
+							</div>
+						</div>
+
+					</div>
+					</div>
+				</div>
+				<!-- Východ slnka -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+						<div class="card-body">
+							<div class="row no-gutters">
+							<div class="col mr-2">
+								<div class="text-xs text-secondary mb-1">Východ slnka</div>
+								<div class="h5 mb-0 font-weight" id="sunrise">Nedoplnené</div>
+							</div>
+								<div class="col-auto">
+									<i class="fa fa-sunrise" style="font-size:60px; color:#007bff;"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Západ slnka -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+						<div class="card-body">
+							<div class="row no-gutters">
+							<div class="col mr-2">
+								<div class="text-xs text-secondary mb-1">Západ slnka</div>
+								<div class="h5 mb-0 font-weight" id="sunset">Nedoplnené</div>
+							</div>
+								<div class="col-auto">
+									<i class="fa fa-sunset" style="font-size:60px; color:#007bff;"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Rýchlosť vetra -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+						<div class="card-body">
+							<div class="row no-gutters">
+							<div class="col mr-2">
+								<div class="text-xs text-secondary mb-1">Rýchlosť vetra</div>
+								<div class="h5 mb-0 font-weight" id="speed">Nedoplnené</div>
+							</div>
+								<div class="col-auto">
+									<i class="fa fa-wind" style="font-size:60px; color:#007bff;"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Počasie -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+						<div class="card-body">
+							<div class="row no-gutters">
+								<div class="col mr-2">
+									<div class="text-xs text-secondary mb-1">Počasie</div>
+									<div class="h5 mb-0 font-weight" id="weather">Nedoplnené</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Lokácia -->
+				<div class="col-xl-12 col-md-12 mb-4">
+					<div class="card dark shadow-sm h-100 py-2">
+					<div class="card-body">
+						<div class="row no-gutters">
+						<div class="col mr-2">
+							<div class="text-xs text-secondary mb-1">Lokácia</div>
+							<span style="float:right; padding-right: 5%"><a href="#" class="text-xs text-primary text-uppercase mb-1" >Zobraziť na mape</a></span>
+							<div class="h5 mb-1 font-weight city">Nedoplnené</div>
+						</div>
+						<div class="col-auto">
+							<i class="fas fa-map-marker-alt" style="font-size:50px; color:#007bff;"></i>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <script src="assets/js/jquery.min.js"></script>
+	    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	    <script src="assets/js/main.js"></script>
+	</body>
+</html>
