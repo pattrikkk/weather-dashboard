@@ -1,3 +1,4 @@
+var openWeatherAPIkey = "KEY";
 var weather = {
 	"clear sky": "Jasná obloha",
 	"few clouds": "Malá oblačnosť",
@@ -57,7 +58,7 @@ function loadData(data) {
 }
 
 function fetchData(city) {
-	fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=093ebc22a5faf43187c92d8954d67706')
+	fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + openWeatherAPIkey)
 	.then(response => response.json())
 	.then(data => loadData(data));
 	animateLoad(true, 2000);
