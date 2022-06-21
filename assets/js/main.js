@@ -10,8 +10,12 @@ var weather = {
 	"mist": "Hmla"
 }
 
-function animateLoad() {
-	$('div.hidden').fadeIn(2000).removeClass('hidden');
+function animateLoad(state, ms) {
+	if (state) {
+		$('.container.hidden').fadeIn(ms).removeClass('hidden');
+	} else {
+		$('.container').fadeOut(ms).addClass('hidden');
+	}
 }
 
 function updateDatum() {
@@ -56,9 +60,9 @@ function fetchData(city) {
 	fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=093ebc22a5faf43187c92d8954d67706')
 	.then(response => response.json())
 	.then(data => loadData(data));
+	animateLoad(true, 2000);
 }
 
 fetchData("Dvory nad Žitavou");
-animateLoad();
 updateDatum();
 setInterval( updateDatum, 1000);
